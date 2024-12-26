@@ -894,7 +894,7 @@
     </section>
     <!-- END FOOTER SECTION -->
 
-    <button id="scrollToTopBtn" onclick="goToTop()" class="fixed bottom-5 right-5 bg-blue-500 text-white rounded-full p-3 shadow-lg hover:bg-blue-600 transition duration-300">
+    <button id="scrollToTopBtn" onclick="goToTop()" class="fixed bottom-5 right-5 bg-blue-500 text-white rounded-full p-3 shadow-lg hover:bg-blue-600 transition duration-300 hidden">
         &#8593;
     </button>
 
@@ -908,6 +908,13 @@
         const goToTop = () => {
             window.scrollTo({ top: 0, behavior: 'smooth'})
         }
+
+        document.addEventListener('keydown', (event) => {
+            if(event.key === 'u'){
+                event.preventDefault()
+                goToTop()
+            }
+        })
     </script>
     <script src="./assets/js/scriptFunction.js"></script>
 </body>
