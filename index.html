@@ -23,6 +23,7 @@
             (n.className += t + "touch");
         })(window, document);
     </script>
+    <script src="./assets/js/projects.js"></script>
     <script src="./assets/js/tailwindcss.js"></script>
     <script src="./assets/js/jquery.min.js"></script>
     <script src="./assets/js/gsap.min.js"></script>
@@ -36,32 +37,6 @@
     <script src="./assets/js/script.min.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-            const cards = document.querySelectorAll(".project-card");
-            cards.forEach((card, index) => {
-                card.addEventListener("mouseenter", () => {
-                    cards.forEach((c) => c.classList.add("blur"));
-                    card.classList.remove("blur");
-                    card.classList.add("scale")
-                });
-
-                card.addEventListener("mouseleave", () => {
-                    cards.forEach((c) => {
-                        c.classList.remove("blur")
-                        c.classList.remove("scale")
-                    });
-                });
-
-                const arrLink = [
-                    'https://smkn3kendal.sch.id',
-                    'https://shop.smkn3kendal.sch.id',
-                    'https://koperasi.smkn3kendal.sch.id'
-                ]
-                card.addEventListener("click", () => {
-                    window.open(arrLink[index], "_blank").focus()
-                })
-            });
-
-
             const socialMedia = document.querySelectorAll("#link_social-media")
             socialMedia.forEach((socMed, index) => {
                 const arrLink = [
@@ -795,48 +770,8 @@
                         Projects
                     </h1>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-3 items-center justify-items-center">
-                    <div class="project-card">
-                        <div class="max-w-sm rounded overflow-hidden shadow-lg">
-                            <img class="w-full" src="./assets/image/web-profile-sekolah.webp"
-                                alt="Web Profile SMK Negeri 3 Kendal" />
-                            <div class="px-6 py-4">
-                                <div class="font-bold text-xl mb-2">Web Profile SMK Negeri 3 Kendal</div>
-                                <p class="text-gray-500 text-base">
-                                    This is official web profile for SMK Negeri 3 Kendal, designed to provide
-                                    comprehensive information about the school, programs, activities, and student
-                                    achievements.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="max-w-sm rounded overflow-hidden shadow-lg">
-                            <img class="w-full" src="./assets/image/web-shop-sekolah.webp"
-                                alt="Web E-Commerce SMK Negeri 3 Kendal" />
-                            <div class="px-6 py-4">
-                                <div class="font-bold text-xl mb-2">Web Shop SMK Negeri 3 Kendal</div>
-                                <p class="text-gray-500 text-base">
-                                    This project is an e-commerce website developed for SMK Negeri 3 Kendal, designed to
-                                    facilitate online sales of school merchandise and student-made products.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="max-w-sm rounded overflow-hidden shadow-lg">
-                            <img class="w-full" src="./assets/image/web-koperasi-sekolah.webp"
-                                alt="Web Koperasi SMK Negeri 3 Kendal" />
-                            <div class="px-6 py-4">
-                                <div class="font-bold text-xl mb-2">AJS Cooperative Web</div>
-                                <p class="text-gray-500 text-base">
-                                    This project is a web application developed for the cooperative of SMK Negeri 3
-                                    Kendal, aimed at providing a digital platform for members to access information,
-                                    manage transactions, and promote cooperative activities.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-3 items-center justify-items-center" id="projects-list">
+                    <!-- PROJECTS CONTENT -->
                 </div>
             </div>
         </section>
