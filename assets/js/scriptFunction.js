@@ -32,16 +32,18 @@ document.addEventListener("DOMContentLoaded", () => {
         projectContainer.appendChild(projectCard);
 
         projectCard.addEventListener("mouseenter", () => {
-            projectCard.classList.add("scale");
+            projectCard.classList.add("cursor-pointer")
+            projectCard.classList.add("md:scale");
             Array.from(projectContainer.children).forEach((card) => {
-                if (card !== projectCard) card.classList.add("blur");
+                if (card !== projectCard) card.classList.add("md:blur");
             });
         });
 
         projectCard.addEventListener("mouseleave", () => {
-            projectCard.classList.remove("scale");
+            projectCard.classList.remove("cursor-pointer")
+            projectCard.classList.remove("md:scale");
             Array.from(projectContainer.children).forEach((card) =>
-                card.classList.remove("blur")
+                card.classList.remove("md:blur")
             );
         });
 
