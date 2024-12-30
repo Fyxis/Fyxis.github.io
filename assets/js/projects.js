@@ -25,6 +25,6 @@ const projects = [
         "title": "Website Project List",
         "image": "assets/image/web-project-list.png",
         "description": "A project listing website is a simple online platform dedicated to showcasing completed or ongoing projects. It typically features a clean layout with project titles, brief descriptions, and links or visuals for each item.",
-        "site_link": "https://fyxis.github.io"
+        "site_link": "https://fyxis.github.io/project-list"
     }
 ]
